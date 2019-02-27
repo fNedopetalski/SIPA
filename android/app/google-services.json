@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "824701994016",
+    "firebase_url": "https://sipa-b4d31.firebaseio.com",
+    "project_id": "sipa-b4d31",
+    "storage_bucket": "sipa-b4d31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824701994016:android:d6e246fbf2ffceba",
+        "android_client_info": {
+          "package_name": "com.sipa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824701994016-tcmmi1f6nmek1892bgpljti0kst1h2up.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFNnyz-dzgnLrXkezhZn2-wNM9WopV0bI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824701994016:android:e17e08c79d7b0557",
+        "android_client_info": {
+          "package_name": "com.testsipa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824701994016-tcmmi1f6nmek1892bgpljti0kst1h2up.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFNnyz-dzgnLrXkezhZn2-wNM9WopV0bI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
