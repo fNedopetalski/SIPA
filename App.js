@@ -33,7 +33,7 @@ export default class App extends Component {
   }
 
   render() {
-    return (this.state.isAuthenticaded ? <AppContainer /> : <AppContainer />);
+    return (this.state.isAuthenticaded ? <AppLogged /> : <AppContainer />);
   }
 }
 
@@ -57,11 +57,12 @@ const MainScreenStackNavigator = createStackNavigator({
         ),
         headerTitle: "SIPA",
         headerTitleStyle: {
-          paddingLeft: 85,
+          paddingLeft: 77,
+          fontSize: 30,
         },
         headerRight: (
           <TouchableOpacity style={{ paddingRight: 7 }}
-          onPress={() => <AddSala/> }>
+          onPress={() =>  navigation.navigate('AddSala') }>
             <Text style={{
               color: '#FFF',
               fontFamily: 'Quicksand-Bold',
