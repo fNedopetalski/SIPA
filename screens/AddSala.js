@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Modal, TextInput, TouchableOpacity } from 'react-native';
+import App from '../App';
 
 export default class AddSala extends Component {
 
@@ -7,11 +8,12 @@ export default class AddSala extends Component {
     nameClass: '',
     descriptionClass: '',
     codeClass: '',
+    modalVisible: false,
   };
 
   render() {
     return (
-      <Modal animationType="fade" transparent={true} visible={this.props.visible} onRequestClose={() => null}>
+      <Modal animationType="fade" transparent={true} visible={this.state.modalVisible} onRequestClose={() => null}>
         <View style={styles.container}>
           <View style={styles.modalContainer}>
             <Text style={styles.textEnter}>Entrar na Sala</Text>

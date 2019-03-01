@@ -15,9 +15,6 @@ render() {
           <StatusBar
             hidden={true}
           />
-          <TouchableOpacity onPress={() => { this.setState({ modalVisible: true }) }} >
-            <Text style={styles.headerButton}>+</Text>
-          </TouchableOpacity>
         </View>
       </ImageBackground>
       <AddSala

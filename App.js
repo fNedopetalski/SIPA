@@ -18,6 +18,7 @@ export default class App extends Component {
       isLoadingComplete: false,
       isAuthenticationReady: false,
       isAuthenticaded: false,
+      //modalVisible: false,
     };
 
     //Inicialização do Firebase
@@ -25,7 +26,9 @@ export default class App extends Component {
     firebase.auth().onAuthStateChanged(this.onAuthStateChanged);
   }
 
-
+  setModalVisible = () => {
+    AddSala.setState({modalVisible: true});
+  }
 
   onAuthStateChanged = (user) => {
     this.setState({ isAuthenticationReady: true });
@@ -62,7 +65,7 @@ const MainScreenStackNavigator = createStackNavigator({
         },
         headerRight: (
           <TouchableOpacity style={{ paddingRight: 7 }}
-          onPress={() =>  navigation.navigate('AddSala') }>
+          onPress={this.setModalVisible }>
             <Text style={{
               color: '#FFF',
               fontFamily: 'Quicksand-Bold',
@@ -94,3 +97,4 @@ const AppSwitchNavigator = createSwitchNavigator({
 
 const AppContainer = createAppContainer(AppSwitchNavigator);
 const AppLogged = createAppContainer(AppDrawerNavigator);
+const modal = <AddSala/>;
