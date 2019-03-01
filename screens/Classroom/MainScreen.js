@@ -7,6 +7,29 @@ export default class MainScreen extends Component {
   state = {
     modalVisible: false,
   };
+  /* Gabriel's part
+  Not using it because of the react-navigation header
+  
+  <View style={styles.header}>
+  <TouchableOpacity onPress={() => this.setState({})} >
+    <View style={styles.iconLeft}></View>
+    <View style={styles.iconLeft}></View>
+    <View style={styles.iconLeft}></View>
+  </TouchableOpacity>
+  <View style={styles.titleText}>
+    <Text style={styles.headerText}>SALAS</Text>
+  </View>
+  <TouchableOpacity onPress={() => this.setState({ modalVisible: true })} >
+    <Text style={styles.headerButton}>+</Text>
+  </TouchableOpacity>
+</View>
+  <ScrollView>
+  </ScrollView>
+</ImageBackground >
+  <AddSala
+    onCancel={() => this.setState({ modalVisible: false })}
+    visible={this.state.modalVisible}
+  />*/
 render() {
   return (
     <View>
@@ -15,6 +38,7 @@ render() {
           <StatusBar
             hidden={true}
           />
+
         </View>
       </ImageBackground>
       <AddSala
