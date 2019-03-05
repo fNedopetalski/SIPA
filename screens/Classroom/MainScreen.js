@@ -7,6 +7,7 @@ export default class MainScreen extends Component {
   state = {
     modalVisible: false,
   };
+
   /* Gabriel's part
   Not using it because of the react-navigation header
   
@@ -30,24 +31,35 @@ export default class MainScreen extends Component {
     onCancel={() => this.setState({ modalVisible: false })}
     visible={this.state.modalVisible}
   />*/
-render() {
-  return (
-    <View>
-      <ImageBackground source={require('../Images/patternCinza.png')} style={{ width: 360, height: 720 }}>
-        <View>
-          <StatusBar
-            hidden={true}
-          />
-
-        </View>
-      </ImageBackground>
-      <AddSala
-        onCancel={() => { this.setState({ modalVisible: false }) }}
-        visible={this.state.modalVisible}
-      />
-    </View>
-  );
-}
+  render() {
+    return (
+      <View>
+        <ImageBackground source={require('../Images/patternCinza.png')} style={{ width: 360, height: 720 }}>
+          <View>
+            <StatusBar
+              hidden={true}
+            />
+            <View style={styles.header}>
+              <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} >
+                <View style={styles.iconLeft}></View>
+                <View style={styles.iconLeft}></View>
+                <View style={styles.iconLeft}></View>
+              </TouchableOpacity>
+              <View style={styles.titleText}>
+                <Text style={styles.headerText}>SALAS</Text>
+              </View>
+              <TouchableOpacity onPress={() => this.setState({ modalVisible: false })} >
+                <Text style={styles.headerButton}>+</Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView>
+            </ScrollView>
+          </View>
+        </ImageBackground >
+        
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

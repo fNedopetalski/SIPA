@@ -18,7 +18,7 @@ export default class App extends Component {
       isLoadingComplete: false,
       isAuthenticationReady: false,
       isAuthenticaded: false,
-      //modalVisible: false,
+      modalVisible: false,
     };
 
     //Inicialização do Firebase
@@ -27,9 +27,10 @@ export default class App extends Component {
   }
 
   setModalVisible = () => {
-    <AddSala>
-      
-    </AddSala>
+    <AddSala
+      visible={this.state.modalVisible}
+      onCancel={() => this.setState({ modalVisible: false })}
+    />
   }
 
   onAuthStateChanged = (user) => {
@@ -41,7 +42,7 @@ export default class App extends Component {
     return (this.state.isAuthenticaded ? <AppLogged /> : <AppContainer />);
   }
 }
-
+/*
 const MainScreenStackNavigator = createStackNavigator({
   MainScreen: MainScreen,
 },
@@ -60,29 +61,34 @@ const MainScreenStackNavigator = createStackNavigator({
             />
           </TouchableOpacity>
         ),
-        headerTitle: "SIPA",
+        headerTitle: "SALAS",
         headerTitleStyle: {
-          paddingLeft: 77,
+          paddingLeft: 57,
           fontSize: 30,
         },
         headerRight: (
-          <TouchableOpacity style={{ paddingRight: 7 }}
-          onPress={this.setModalVisible }>
+          <TouchableOpacity style={{
+            color: '#FFF',
+            fontFamily: 'Quicksand-Bold',
+            fontSize: 40,
+          }}
+            style={{ paddingRight: 7 }}
+            onPress={() =>  this.setState({ modalVisible: true }) } >
             <Text style={{
               color: '#FFF',
               fontFamily: 'Quicksand-Bold',
               fontSize: 40,
             }}>+</Text>
-          </TouchableOpacity>
+          </TouchableOpacity >
 
         )
       };
     }
-  });
+  });*/
 
 const AppDrawerNavigator = createDrawerNavigator({
-  SIPA: {
-    screen: MainScreenStackNavigator,
+  SALAS: {
+    screen: MainScreen,
   },
   'Adicionar Sala': {
     screen: AddSala,
@@ -99,4 +105,3 @@ const AppSwitchNavigator = createSwitchNavigator({
 
 const AppContainer = createAppContainer(AppSwitchNavigator);
 const AppLogged = createAppContainer(AppDrawerNavigator);
-const modal = <AddSala/>;
